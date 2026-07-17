@@ -52,4 +52,4 @@ theme = "hello-friend-ng"
     [[menu.main]]
         identifier  = "about"
         name        = "About"
-        url         = "/about"
+        url         = "/about/"

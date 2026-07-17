@@ -1,0 +1,11 @@
+services:
+  website:
+    build: .
+    container_name: hugo-site
+    restart: unless-stopped
+
+    ports:
+      - "8000:80"
+
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
