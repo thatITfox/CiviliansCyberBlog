@@ -1,0 +1,41 @@
+baseURL = 'localhost'
+locale = 'en-us'
+title = 'Indonesian Civilians Cyber Watch Dog Association'
+theme = "hello-friend-ng"
+
+[services]
+    [services.rss]
+        # Maximum number of items in the RSS feed.
+        limit = 42
+
+[taxonomies]
+    tag      = "tags"
+    category = "categories"
+    series   = "series"
+
+[params]
+    dateform        = "Jan 2, 2006"
+    dateformShort   = "Jan 2"
+    dateformNum     = "2006-01-02"
+    dateformNumTime = "2006-01-02 15:04"
+
+    homeSubtitle = "The ICCWDA, by the people, for the people"
+
+    enableReadingTime = true
+    enableSharingButtons = true
+
+    [params.logo]
+        logoMark     = ">"
+        logoText     = "$ cd /home/ICCWDA"
+        logoHomeLink = "/"
+    
+[menu]
+    [[menu.main]]
+        identifier = "posts"
+        name       = "Posts"
+        url        = "/posts/"
+
+    [[menu.main]]
+        identifier  = "about"
+        name        = "About"
+        url         = "/about"
