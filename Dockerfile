@@ -1,10 +1,12 @@
 FROM hugomods/hugo:exts AS builder
 
 WORKDIR /src
+ARG HUGO_BASEURL
+ENV HUGO_BASEURL=${HUGO_BASEURL}
 
 COPY . .
 
-RUN hugo --minify -b "${BASE_URL}"
+RUN hugo --minify -b "${HUGO_BASEURL}"
 
 # Stage 2: Serve with Nginx
 FROM nginx:alpine

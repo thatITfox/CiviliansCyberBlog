@@ -1,8 +1,11 @@
 services:
   website:
-    build: .
-    environment:
-      BASE_URL: ${BASE_URL}
+    build:
+      context: .
+      args:
+        # make sure to have this environment variable set in your .env file
+        HUGO_BASEURL: ${HUGO_BASEURL}
+
     container_name: hugo-site
     restart: unless-stopped
 
