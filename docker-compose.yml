@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "8000:80"
+      - "8002:80"
 
     volumes:
       - ./public:/usr/share/nginx/html:ro
