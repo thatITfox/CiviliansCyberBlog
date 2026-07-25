@@ -4,7 +4,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN hugo --minify
+RUN hugo --minify -b "${BASE_URL}"
 
 # Stage 2: Serve with Nginx
 FROM nginx:alpine

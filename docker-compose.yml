@@ -1,11 +1,10 @@
 services:
   website:
     build: .
+    environment:
+      BASE_URL: ${BASE_URL}
     container_name: hugo-site
     restart: unless-stopped
 
     ports:
       - "8002:80"
-
-    volumes:
-      - ./public:/usr/share/nginx/html:ro
